@@ -1,8 +1,6 @@
-Certainly! Here's a refined description for your GitHub repository:
 
----
 
-**Title: 3D Line Representation of Two-Frame Mapping using OpenCV Trackbar and Matplotlib**
+**3D Line Representation of Two-Frame Mapping using OpenCV Trackbar and Matplotlib**
 
 **Description:**
 
@@ -41,5 +39,3 @@ This repository contains a Python program that visually represents the mapping b
 Feel free to explore and modify the code to suit your specific use case. Contributions and feedback are welcome!
 
 ---
-
-I hope this description helps! Let me know if you need any further adjustments.
