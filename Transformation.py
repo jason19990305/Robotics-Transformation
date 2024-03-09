@@ -7,6 +7,8 @@ from mpl_toolkits.mplot3d import Axes3D # <--- This is important for 3d plotting
 from IPython.display import display, clear_output
 import time
 
+# The Transformation matrix is Euler Angle Z-Y-X.
+
 
 class Homogeneous():
     def __init__(self) -> None:
@@ -67,40 +69,40 @@ class Transformation():
 
         img = np.zeros([480,400,1])
 
-        cv2.imshow('transition',img)
+        cv2.imshow('Transformation',img)
         # A
-        cv2.createTrackbar('A R x', 'transition', 0, 180, self.A_r_x_bar)
-        cv2.createTrackbar('A R y', 'transition', 0, 180, self.A_r_y_bar)
-        cv2.createTrackbar('A R z', 'transition', 0, 180, self.A_r_z_bar)
+        cv2.createTrackbar('A R x', 'Transformation', 0, 180, self.A_r_x_bar)
+        cv2.createTrackbar('A R y', 'Transformation', 0, 180, self.A_r_y_bar)
+        cv2.createTrackbar('A R z', 'Transformation', 0, 180, self.A_r_z_bar)
 
-        cv2.createTrackbar('A p x', 'transition', 0, 100, self.A_p_x_bar)
-        cv2.createTrackbar('A p y', 'transition', 0, 100, self.A_p_y_bar)
-        cv2.createTrackbar('A p z', 'transition', 0, 100, self.A_p_z_bar)
+        cv2.createTrackbar('A p x', 'Transformation', 0, 100, self.A_p_x_bar)
+        cv2.createTrackbar('A p y', 'Transformation', 0, 100, self.A_p_y_bar)
+        cv2.createTrackbar('A p z', 'Transformation', 0, 100, self.A_p_z_bar)
 
-        cv2.setTrackbarPos('A R x', 'transition', 0)
-        cv2.setTrackbarPos('A R y', 'transition', 0)
-        cv2.setTrackbarPos('A R z', 'transition', 0)
+        cv2.setTrackbarPos('A R x', 'Transformation', 0)
+        cv2.setTrackbarPos('A R y', 'Transformation', 0)
+        cv2.setTrackbarPos('A R z', 'Transformation', 0)
 
-        cv2.setTrackbarPos('A p x', 'transition', 0)
-        cv2.setTrackbarPos('A p y', 'transition', 0)
-        cv2.setTrackbarPos('A p z', 'transition', 0)
+        cv2.setTrackbarPos('A p x', 'Transformation', 0)
+        cv2.setTrackbarPos('A p y', 'Transformation', 0)
+        cv2.setTrackbarPos('A p z', 'Transformation', 0)
 
         # B
-        cv2.createTrackbar('B R x', 'transition', 0, 180, self.B_r_x_bar)
-        cv2.createTrackbar('B R y', 'transition', 0, 180, self.B_r_y_bar)
-        cv2.createTrackbar('B R z', 'transition', 0, 180, self.B_r_z_bar)
+        cv2.createTrackbar('B R x', 'Transformation', 0, 180, self.B_r_x_bar)
+        cv2.createTrackbar('B R y', 'Transformation', 0, 180, self.B_r_y_bar)
+        cv2.createTrackbar('B R z', 'Transformation', 0, 180, self.B_r_z_bar)
 
-        cv2.createTrackbar('B p x', 'transition', 0, 100, self.B_p_x_bar)
-        cv2.createTrackbar('B p y', 'transition', 0, 100, self.B_p_y_bar)
-        cv2.createTrackbar('B p z', 'transition', 0, 100, self.B_p_z_bar)
+        cv2.createTrackbar('B p x', 'Transformation', 0, 100, self.B_p_x_bar)
+        cv2.createTrackbar('B p y', 'Transformation', 0, 100, self.B_p_y_bar)
+        cv2.createTrackbar('B p z', 'Transformation', 0, 100, self.B_p_z_bar)
 
-        cv2.setTrackbarPos('B R x', 'transition', 0)
-        cv2.setTrackbarPos('B R y', 'transition', 0)
-        cv2.setTrackbarPos('B R z', 'transition', 0)
+        cv2.setTrackbarPos('B R x', 'Transformation', 0)
+        cv2.setTrackbarPos('B R y', 'Transformation', 0)
+        cv2.setTrackbarPos('B R z', 'Transformation', 0)
 
-        cv2.setTrackbarPos('B p x', 'transition', 0)
-        cv2.setTrackbarPos('B p y', 'transition', 0)
-        cv2.setTrackbarPos('B p z', 'transition', 0)
+        cv2.setTrackbarPos('B p x', 'Transformation', 0)
+        cv2.setTrackbarPos('B p y', 'Transformation', 0)
+        cv2.setTrackbarPos('B p z', 'Transformation', 0)
         while True:
             self.plot()
             if cv2.waitKey(1) == ord('q'):
